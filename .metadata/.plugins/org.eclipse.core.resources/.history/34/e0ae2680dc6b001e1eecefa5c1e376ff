@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@page isELIgnored="false" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Success</title>
+</head>
+<body>
+<h1>Welcome, ${data.name}!</h1>
+<h2>Your form is successfully filled.</h2>
+<h2>Your email is ${data.email }</h2>
+<h2>Your password is ${data.password }, try to secure it.</h2>
+
+</body>
+</html>

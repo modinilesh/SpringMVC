@@ -1,0 +1,22 @@
+package springmvc.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate5.HibernateTemplate;
+import org.springframework.stereotype.Repository;
+
+import ObjectHandler.ContactObject;
+
+@Repository
+public class ContactDao {
+	
+	@Autowired
+	HibernateTemplate hibernateTemplate;
+	
+	public int saveContact(ContactObject user) {
+		int id = (Integer)this.hibernateTemplate.save(user);
+		return id;
+		
+	}
+	
+
+}

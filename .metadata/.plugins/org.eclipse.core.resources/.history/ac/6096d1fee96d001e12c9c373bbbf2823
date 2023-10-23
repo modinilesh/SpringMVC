@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/mvc  
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+	<context:component-scan base-package="springmvc" /> <!--it will activate all annotations used in each packages starting with 
+		springmvc name -->
+	<!-- <tx:annotation-driven /> -->
+
+	<!--Step-3 : Configuring view Resolver -->
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		name="viewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+
+
+	<!-- It is for DataSource class : will be used for database setup -->
+	<bean
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		name="ds">
+		<property name="driverClassName"
+			value="com.mysql.cj.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/springjdbc" />
+		<property name="username" value="root" />
+		<property name="password" value="Nilesh@123" />
+	</bean>
+
+
+
+	<!-- It is for LocalSessionFactoryBean class -->
+	<bean
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"
+		name="sessionfact">
+		<!-- It contains 3 properties -->
+		<!-- 1 -->
+		<property name="dataSource" ref="ds" />
+		<!-- 2 -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+		<!-- 3 -->
+		<property name="annotatedClasses">
+			<list>
+				<value> springmvc.ObjectHandler.ContactObject </value>
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- It is for HibernateTemplate class -->
+	<bean class="org.springframework.orm.hibernate5.HibernateTemplate"
+		name="hiberTemp">
+		<property name="sessionFactory" ref="sessionfact" />
+	</bean>
+
+	<!-- This bean is for managing the transactions -->
+	<bean
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager"
+		name="transactionManager">
+		<property name="sessionFactory" ref="sessionfact" />
+	</bean>
+
+
+</beans>

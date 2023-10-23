@@ -1,0 +1,5 @@
+package springmvcsearch.objecthandler;
+
+public class Student {
+
+}

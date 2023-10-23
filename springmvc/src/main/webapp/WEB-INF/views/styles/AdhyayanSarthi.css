@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+  }
+  
+  .container {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+  }
+  
+  .background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    transform: translateZ(-40px) scale(6);
+  }
+  
+  .foreground {
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .image {
+    height: 30vw;
+    max-height: 400px; /* Added maximum height for better responsiveness */
+  }
+  
+  .intro {
+    justify-content: flex-end;
+    align-items: center;
+    background-color: lightgray;
+    font-weight: 600;
+    font-size: larger;
+    padding: 2rem; /* Adjusted padding for better responsiveness */
+    text-align: center; /* Centered text for better responsiveness */
+  }
+  
+  h1 {
+    position: initial;
+    top: 4rem;
+    font-size: 4rem;
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 0; /* Removed default margin for better responsiveness */
+    padding: 0; /* Removed default padding for better responsiveness */
+    width: 100%; /* Added width for better responsiveness */
+    text-align: center; /* Centered text for better responsiveness */
+  }
+  
+  section {
+    background-color: rgba(45, 45, 45);
+    color: white;
+    padding: 5rem 0;
+  }
+  
+  .about {
+    font-size: 5rem;
+    padding: 0 10rem;
+    text-align: center; /* Centered text for better responsiveness */
+  }
+  
+  .text {
+    height: max-content;
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+    text-align: center; /* Centered text for better responsiveness */
+  }
+  
+  .bg {
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+  }
+  
+  .desc {
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+  }
+  
+  .bg1 {
+    background-image: url(scholar.png);
+  }
+  
+  .bg2 {
+    background-image: url(career-guidance-56a0f25c5f9b58eba4b572ac.png);
+  }
+  
+  .bg3 {
+    background-image: url(opportunity\ \(1\)\ \(1\).png);
+  }
+  
+  .contact {
+    position: relative;
+    font-size: 4rem;
+    letter-spacing: 4px;
+    color: rgba(45, 45, 45);
+    text-shadow: 0 0 10 rgba(0, 0, 0, 0.3);
+  }
+
+  .contact-form {
+    color: black;
+    width: 100%;
+    max-width: 500px; /* Added maximum width for better responsiveness */
+    margin: 0 auto; /* Centered form horizontally */
+    padding: 10px;
+    border: 1px solid brown;
+  }
+  
+  .contact-frame-section {
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap; /* Added flex-wrap to handle smaller screens */
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px; /* Adjusted padding for better responsiveness */
+  }
+  
+  .icons {
+    align-self: center;
+  }
+  
+  .frame {
+    padding-right: 10px;
+  }
+  
+  #submit,
+  #reset {
+    background-color: rgb(191, 94, 94);
+    width: 80px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+  }
+  
+  /* Media Queries for Responsive Layout */
+  
+  @media (max-width: 768px) {
+    .about,
+    .text {
+      padding: 0 2rem; /* Adjusted padding for smaller screens */
+    }
+    
+    .image {
+      height: 50vw;
+      max-height: 300px; /* Adjusted maximum height for smaller screens */
+    }
+  
+    .contact-form {
+      width: 100%;
+      max-width: 100%; /* Adjusted maximum width for smaller screens */
+      margin: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about,
+    .text {
+      padding: 0 1rem; /* Adjusted padding for even smaller screens */
+    }
+    
+    .image {
+      height: 70vw;
+      max-height: 200px; /* Adjusted maximum height for even smaller screens */
+    }
+    
+    h1 {
+      font-size: 3rem; /* Decreased font size for smaller screens */
+    }
+    
+    .contact {
+      font-size: 3rem; /* Decreased font size for smaller screens */
+    }
+  }
+  

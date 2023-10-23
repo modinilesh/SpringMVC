@@ -1,0 +1,14 @@
+package springmvc.service;
+
+import ObjectHandler.ContactObject;
+import springmvc.dao.ContactDao;
+
+public class UserContactService {
+	
+	private ContactDao contactDao;
+	
+	public int createUser(ContactObject user) {
+		return this.contactDao.saveContact(user);
+	}
+
+}

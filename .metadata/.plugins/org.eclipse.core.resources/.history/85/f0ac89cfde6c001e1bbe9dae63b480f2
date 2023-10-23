@@ -1,0 +1,131 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhyayan Sarthi</title>
+    <link rel="stylesheet" type="text/css" href="/AdhyayanSarthi.css">
+    <link rel="shortcut icon" href="favicon (1) (1).png" type="image/x-icon">
+</head>
+<body>
+
+<!--     <nav id="navbar">
+        <div id="logo">
+            <img src="logo.png" alt="TastyMealzz.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#client-section">Our Clients</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav> -->
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="wel">
+                <h1 >WELCOME TO ADHYAYAN SARTHI !</h1>
+            </div>
+           
+
+            <img src="favicon (1) (1).png" alt="AdhyayanSarthi"  class="background">
+
+            <div class="foreground">
+                <img src="anand-removebg-preview.png" alt="AdhyayanSarthi" class="image">
+                <pre class="intro">
+                    Anand Kumar Pandey,
+                    BTech, NIT-Bhopal
+                    Faculty- Mathematics
+                </pre>
+            </div>
+            <div class="foreground">
+                <img src="1670033747690-removebg-preview.png" alt="AdhyayanSarthi"  class="image">
+                <pre class="intro">
+                    Nilesh Modi,
+                    BTech, NIT-Bhopal
+                    Faculty- Chemistry
+                </pre>
+            </div>
+            <div class="foreground">
+                <img src="anuj1-removebg-preview.png" alt="AdhyayanSarthi" class="image">
+                <pre class="intro">
+                    Anuj Singh Rajawat,
+                    BTech, RGPV-Bhopal
+                    Faculty- Physics
+                </pre>
+            </div>
+        </div>
+
+        <section>
+            <h2 class="about">About</h2>
+            <p class="text">
+                Adhyayan Saarthi is a comprehensive student support platform dedicated to empowering students in every facet of their academic journey. Our primary objective is to provide unparalleled assistance to students by offering a wide range of services, including personalized career guidance, expert consulting, valuable insights into various career paths, access to scholarships and financial aid opportunities, and much more. With a deep commitment to student success, Adhyayan Saarthi strives to be a trusted companion, guiding students towards achieving their educational and professional aspirations.                
+                <br><br>
+            </p>
+
+            <div class="bg bg1">
+                <h2 class="desc">SCHOLARSHIPS</h2>
+            </div>
+                <p class="text">
+                    At Adhyayan Saarthi, we provide comprehensive and detailed information about scholarships available in Madhya Pradesh (MP). Our dedicated team researches and presents the eligibility criteria, application processes, deadlines, and necessary documentation for various scholarships. We also offer personalized guidance to help students navigate the scholarship application process effectively. Our goal is to make scholarship opportunities in MP more accessible and empower students to pursue their educational goals without financial barriers.
+                    <br><br>
+                    By offering in-depth information about scholarships in Madhya Pradesh, we aim to bridge the information gap and make the scholarship search process more accessible and less overwhelming for students. We believe that every deserving student should have the opportunity to pursue their educational goals without financial constraints, and we are here to help them navigate the scholarship landscape in MP with confidence and success.
+                </p>
+
+           
+
+
+            <div class="bg bg2">
+                <h2 class="desc">CAREER GUIDANCE</h2>
+            </div>
+                <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula nisi eget nisl interdum, sed posuere dolor feugiat. Fusce euismod dictum nisl, in tincidunt arcu. Donec nec libero vitae purus venenatis malesuada. Sed tempus elementum elit, nec blandit leo congue eu. Donec non dui at libero facilisis auctor. Fusce nec lacus at lectus tincidunt tristique in a metus. Aenean sit amet dolor nec ex volutpat blandit. Vestibulum placerat vel est at tincidunt.
+                    <br><br>
+                </p>
+
+            <div class="bg bg3">
+                <h2 class="desc">EXPERT CONSULTING</h2>
+            </div>
+                <p class="text">
+                    Our expert consulting services are designed to guide students through the complexities of career planning and educational choices. We understand that choosing the right career path and academic institution can be overwhelming, and we aim to simplify this process for students. Our team of experienced consultants offers personalized advice and insights based on the individual needs and aspirations of students. Whether you are looking for guidance on course selection, career options, or educational institutions, our experts are here to assist you.                    
+                    <br><br>
+                </p>
+        </section>
+    </div>
+
+    <section class="client-section" id="client-section">
+        <h2 class="client">Our Clients</h2>
+        <p class="text">At Adhyayan Saarthi, our clients are our most valuable assets. We are committed to delivering exceptional services that meet their unique needs and preferences. Here are some of the clients who have put their trust in us.</p>
+        <div class="client-list">
+            <img src="client1.png" alt="Client 1" class="client-img">
+            <img src="client2.png" alt="Client 2" class="client-img">
+            <img src="client3.png" alt="Client 3" class="client-img">
+            <img src="client4.png" alt="Client 4" class="client-img">
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="contact-title">Contact Us</h2>
+        <div class="contact-form">
+            <form action="/springmvc/contact" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Adhyayan Sarthi. All rights reserved.</p>
+    </footer>
+</body>
+</html>

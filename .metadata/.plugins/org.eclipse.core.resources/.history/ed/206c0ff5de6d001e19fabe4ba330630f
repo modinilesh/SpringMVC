@@ -1,0 +1,18 @@
+package springmvc.dao;
+
+import org.springframework.orm.hibernate5.HibernateTemplate;
+
+import ObjectHandler.ContactObject;
+
+public class ContactDao {
+	
+	HibernateTemplate hibernateTemplate;
+	
+	public int saveContact(ContactObject user) {
+		int id = (Integer)this.hibernateTemplate.save(user);
+		return id;
+		
+	}
+	
+
+}
